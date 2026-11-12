@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto de Lei nº 1/2026 | Proteção Animal - Cascavel/PR</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e5a8c',
+                        secondary: '#28a745',
+                        accent: '#f59e0b',
+                        dark: '#1f2937',
+                        light: '#f3f4f6'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                },
+            }
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            }
+            .bg-blur {
+                backdrop-filter: blur(8px);
+                -webkit-backdrop-filter: blur(8px);
+            }
+        }
+    </style>
+    
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .nav-scrolled {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="font-sans text-dark bg-gray-50">
+    <!-- Navegação -->
+    <nav id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 py-3 px-6 md:px-12">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#inicio" class="flex items-center gap-2">
+                <i class="fa fa-paw text-primary text-2xl"></i>
+                <span class="font-bold text-lg md:text-xl text-primary">PL 1/2026</span>
+            </a>
+            
+            <!-- Menu Desktop -->
+            <div class="hidden md:flex gap-8 items-center">
+                <a href="#inicio" class="font-medium hover:text-primary transition-colors">Início</a>
+                <a href="#sobre" class="font-medium hover:text-primary transition-colors">Sobre o Projeto</a>
+                <a href="#definicoes" class="font-medium hover:text-primary transition-colors">Definições</a>
+                <a href="#medidas" class="font-medium hover:text-primary transition-colors">Medidas</a>
+                <a href="#penalidades" class="font-medium hover:text-primary transition-colors">Penalidades</a>
+                <a href="#denuncie" class="font-medium hover:text-primary transition-colors">Denuncie</a>
+                <a href="#texto" class="font-medium hover:text-primary transition-colors">Texto Completo</a>
+            </div>
+            
+            <!-- Botão Menu Mobile -->
+            <button id="menuBtn" class="md:hidden text-dark text-xl">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Menu Mobile -->
+        <div id="mobileMenu" class="md:hidden hidden absolute top-full left-0 w-full bg-white shadow-lg">
+            <div class="container mx-auto py-4 px-6 flex flex-col gap-4">
+                <a href="#inicio" class="font-medium py-2 hover:text-primary transition-colors">Início</a>
+                <a href="#sobre" class="font-medium py-2 hover:text-primary transition-colors">Sobre o Projeto</a>
+                <a href="#definicoes" class="font-medium py-2 hover:text-primary transition-colors">Definições</a>
+                <a href="#medidas" class="font-medium py-2 hover:text-primary transition-colors">Medidas</a>
+                <a href="#penalidades" class="font-medium py-2 hover:text-primary transition-colors">Penalidades</a>
+                <a href="#denuncie" class="font-medium py-2 hover:text-primary transition-colors">Denuncie</a>
+                <a href="#texto" class="font-medium py-2 hover:text-primary transition-colors">Texto Completo</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="pt-32 pb-20 md:pt-40 md:pb-28 bg-gradient-to-br from-primary/95 to-primary">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="max-w-4xl mx-auto text-center text-white">
+                <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight mb-6 text-shadow">
+                    Projeto de Lei nº 1/2026
+                </h1>
+                <p class="text-[clamp(1rem,2vw,1.25rem)] mb-8 text-gray-100 max-w-3xl mx-auto">
+                    Prevenção e Combate ao Abandono e aos Maus-Tratos contra Animais no Município de Cascavel
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#sobre" class="bg-secondary hover:bg-secondary/90 text-white font-semibold py-3 px-8 rounded-lg transition-all shadow-lg">
+                        Conhecer o Projeto
+                    </a>
+                    <a href="#denuncie" class="bg-white/20 hover:bg-white/30 text-white font-semibold py-3 px-8 rounded-lg transition-all backdrop-blur-sm border border-white/30">
+                        <i class="fa fa-exclamation-triangle mr-2"></i>Denunciar Maus-Tratos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre o Projeto -->
+    <section id="sobre" class="py-20 bg-white">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="text-center mb-16">
+                <span class="text-primary font-semibold text-sm uppercase tracking-wider">Apresentação</span>
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold mt-2 mb-6">O que é este Projeto de Lei?</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto text-lg">
+                    O Projeto de Lei nº 1/2026 institui a Política Municipal de Prevenção e Combate ao Abandono e aos Maus-Tratos contra Animais, estabelecendo regras, penalidades e medidas de proteção, bem-estar e conscientização no município de Cascavel.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-gray-50 p-8 rounded-xl shadow-sm card-hover">
+                    <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center text-primary text-xl mb-6">
+                        <i class="fa fa-shield"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Proteção Animal</h3>
+                    <p class="text-gray-600">
+                        Garantir a integridade física, mental e comportamental dos animais domésticos e domesticados, coibindo práticas de abandono e maus-tratos.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-xl shadow-sm card-hover">
+                    <div class="w-14 h-14 bg-secondary/10 rounded-lg flex items-center justify-center text-secondary text-xl mb-6">
+                        <i class="fa fa-balance-scale"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Responsabilidade</h3>
+                    <p class="text-gray-600">
+                        Estabelecer penalidades claras e proporcionais para quem praticar abandono ou maus-tratos, além de promover a guarda responsável.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-xl shadow-sm card-hover">
+                    <div class="w-14 h-14 bg-accent/10 rounded-lg flex items-center justify-center text-accent text-xl mb-6">
+                        <i class="fa fa-lightbulb-o"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Conscientização</h3>
+                    <p class="text-gray-600">
+                        Educação permanente da população sobre posse consciente, adoção responsável e cuidados necessários com os animais.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-primary/5 rounded-2xl p-8 md:p-10">
+                <h3 class="text-xl font-bold mb-6 text-center">Objetivos Principais</h3>
+                <ul class="space-y-4 max-w-3xl mx-auto">
+                    <li class="flex items-start gap-3">
+                        <i class="fa fa-check-circle text-secondary mt-1"></i>
+                        <span>Prevenir o abandono e combater os maus-tratos contra animais;</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fa fa-check-circle text-secondary mt-1"></i>
+                        <span>Incentivar a guarda responsável e a posse consciente;</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fa fa-check-circle text-secondary mt-1"></i>
+                        <span>Reduzir a população de animais em situação de rua por meio de castração e microchipagem;</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fa fa-check-circle text-secondary mt-1"></i>
+                        <span>Promover ações de educação e conscientização na rede de ensino e comunidade;</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fa fa-check-circle text-secondary mt-1"></i>
+                        <span>Estimular a adoção responsável e o cadastramento de animais no município.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Definições -->
+    <section id="definicoes" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="text-center mb-16">
+                <span class="text-primary font-semibold text-sm uppercase tracking-wider">Conceitos</span>
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold mt-2 mb-6">O que são Abandono e Maus-Tratos?</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto text-lg">
+                    A lei define claramente as práticas que serão combatidas, garantindo clareza para a população e para os agentes fiscalizadores.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="bg-white p-8 rounded-xl shadow-sm border-t-4 border-primary">
+                    <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+                        <i class="fa fa-ban text-primary"></i> Abandono
+                    </h3>
+                    <p class="text-gray-700 mb-4">
+                        Deixar, sem assistência, proteção ou provimento de necessidades básicas, em local público ou privado, animal sob sua responsabilidade, colocando-o em situação de risco, desamparo ou sofrimento.
+                    </p>
+                    <div class="bg-gray-50 p-4 rounded-lg text-sm text-gray-600">
+                        <strong>Considera-se abandono:</strong> deixar o animal sem alimento, água, abrigo ou cuidados essenciais, independentemente do local.
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-sm border-t-4 border-red-500">
+                    <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+                        <i class="fa fa-exclamation-circle text-red-500"></i> Maus-Tratos
+                    </h3>
+                    <p class="text-gray-700 mb-4">
+                        Toda ação ou omissão que atente contra a integridade física, mental ou comportamental do animal.
+                    </p>
+                    <div class="space-y-2 text-sm text-gray-600">
+                        <p class="font-medium">Inclui:</p>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>Privação de alimento, água ou abrigo adequado;</li>
+                            <li>Agressão física, envenenamento ou mutilação;</li>
+                            <li>Falta de assistência veterinária quando necessária;</li>
+                            <li>Acorrentamento contínuo ou aprisionamento em condições insalubres;</li>
+                            <li>Submissão a trabalhos excessivos.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Medidas e Ações -->
+    <section id="medidas" class="py-20 bg-white">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="text-center mb-16">
+                <span class="text-primary font-semibold text-sm uppercase tracking-wider">Ações</span>
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold mt-2 mb-6">Medidas de Proteção e Prevenção</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto text-lg">
+                    O Poder Executivo, em parceria com organizações da sociedade civil e instituições, implementará as seguintes ações:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-10 mb-16">
+                <div>
+                    <h3 class="text-xl font-bold mb-6 text-primary">Campanhas de Conscientização</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3">
+                            <i class="fa fa-check text-secondary mt-1"></i>
+                            <span>Ações educativas nas escolas, UBS e equipamentos públicos;</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa fa-check text-secondary mt-1"></i>
+                            <span>Divulgação nos canais oficiais e imprensa local;</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa fa-check text-secondary mt-1"></i>
+                            <span>Distribuição de materiais impressos e digitais;</span>
+                        </li>
+
+</body>
+</html>
